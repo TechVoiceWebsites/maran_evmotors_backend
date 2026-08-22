@@ -197,6 +197,8 @@ app.post('/api/enquiryForm', async (req, res) => {
         </div>
       `
     });
+    console.log('CONTACT RESEND DATA:', data);
+    console.log('CONTACT RESEND ERROR:', error);
 
     if (error) {
       console.error('Resend enquiry error:', error);
