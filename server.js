@@ -47,7 +47,7 @@ app.post('/api/contact', async (req, res) => {
 
     const { data, error } = await resend.emails.send({
       from: 'Maran EV Motors <noreply@maranevmotors.com>',
-      to: process.env.ADMIN_EMAIL,
+      to: ADMIN_EMAIL,
       replyTo: email,
       subject: `New Contact Enquiry - ${subject}`,
       html: `
@@ -135,7 +135,7 @@ app.post('/api/enquiryForm', async (req, res) => {
 
     const { data, error } = await resend.emails.send({
       from: 'Maran EV Motors <noreply@maranevmotors.com>',
-      to: process.env.ADMIN_EMAIL,
+      to: ADMIN_EMAIL,
       replyTo: email?.trim() || undefined,
       subject: `New Vehicle Enquiry - ${vehicle}`,
 
