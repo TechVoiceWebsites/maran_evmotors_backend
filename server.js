@@ -7,6 +7,10 @@ dotenv.config();
 const app = express();
 
 const resend = new Resend(process.env.RESEND_API_KEY);
+const ADMIN_EMAIL = process.env.ADMIN_EMAIL;
+
+console.log("ADMIN_EMAIL exists:", !!ADMIN_EMAIL);
+console.log("RESEND_API_KEY exists:", !!process.env.RESEND_API_KEY);
 
 app.use(cors({
   origin: [
