@@ -52,7 +52,7 @@ app.post('/api/contact', async (req, res) => {
     const { data, error } = await resend.emails.send({
       from: 'Maran EV Motors <noreply@maranevmotors.com>',
       to: ADMIN_EMAIL,
-      replyTo: email,
+      replyTo: email.trim(),
       subject: `New Contact Enquiry - ${subject}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 650px; margin: auto;">
